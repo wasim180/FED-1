@@ -1,0 +1,36 @@
+h1{
+            border: 1px solid black;
+            color: white;
+            text-align: center;
+            background-color: black;
+
+        }
+        #p{
+            color: red;
+            border: 1px solid black;
+            height: 200px;
+            padding-left: 20px;
+            padding-top: 20px;
+            
+        }
+        .a{
+            color: white;
+            background-color: rgb(221, 193, 32);
+            height: 200px;
+            width: 100%;
+            text-align: center;
+            margin-top: 50px;
+           padding-top: 100px;
+        }
+        .c{
+            display: inline-block;
+            height: 150px;
+            width: 150px;
+            border: 1px solid black;
+            font-size: 30px;
+            font-family: italic;
+            padding-left: 20px;
+            padding-top: 20px;
+            margin-left: 70px;
+            margin-top: 70px;
+        }
