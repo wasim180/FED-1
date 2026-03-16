@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="demo">DOM Example</title> 
+</head>
+<body >
+    <div id="a">
+        <h1 id="ab">hello firdosh</h1>
+        <p>hello wasim</p>
+        <p >hello atif</p>
+    </div>
+
+    <script>
+        alert(document.getElementById("a").nodeName);
+        alert(document.getElementById("ab").nodeName);
+        alert(document.getElementById("ab").nextElementSibling.textContent);
+        alert(document.getElementById("ab").nextElementSibling.nodeName);
+        alert(document.getElementById("a").firstElementChild.textContent);
+        alert(document.getElementById("a").lastElementChild.textContent);
+    </script>
+</body> 
+</html>
