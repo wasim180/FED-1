@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom node</title>
+</head>
+<body id='abc'>
+    <input type="text" id="a" value="">
+    <button onclick="create()">Click me</button>
+   <!-- <div id="abc"></div> -->
+    
+<script>
+    function create(){
+        const para = document.createElement("p");                             //creating a paragraph element
+       // const node1= document.createTextNode("Welcome to learn js node-");   //inserting text in element
+       // now we getting text from user by using input box.
+        const node=document.createTextNode(document.getElementById('a').value);
+      //  para.appendChild(node1);                       //printing node1 valuein paragraph 
+        para.appendChild(node) ;                       //printing the node value in paragraph variable.;
+       let element=document.getElementById('abc');      //calling by the body element by his id
+       element.appendChild(para);                       //printing the pargraph in body by using element variable
+    }
+</script>
+    
+</body>
+</html>
+
+<!--<table>
+        <tr>
+            <td><label>ENTER YOUR NAME:    </label></td>
+            <td><input type="text" > <br></td>
+        </tr>
+         <tr>
+            <td> <label>ENTER PASSWORD:    </label></td>
+            <td><input type="password" placeholder="pass.."><br></td>
+        </tr>
+         <tr>
+            <td> <label>CONFIRM PASSWORD:    </label></td>
+            <td><input type="password" placeholder="pass."><br></td>
+        </tr>
+
+       <tr>
+        <td><button>Submit form</button></td>
+    </tr>
+       <td><button>clear form</button></td>
+      </table>-->

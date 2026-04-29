@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form Validation</title>
+<style>  
+h2{
+    text-align: center;
+    text-decoration: underline; 
+}
+body{
+    align-items: center;
+    background-color:beige;  
+    justify-content:center ;
+}
+#fm1{
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 10px;
+    width: 500px;
+    margin-left: 400px;
+    margin-top: 50px;
+}
+#sb{
+    background-color:deepskyblue;
+    width:100px;
+    border-radius: 20px;
+    text-align: center; 
+    margin-left: 37%;
+}
+#sb:hover{
+    background-color:blue;
+    width:100px;
+    border-radius: 30px;
+    text-align: center; 
+    color: white;
+
+}
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+  input{
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        background-color:rgb(255, 232, 203);
+    }
+
+
+
+    
+    </style>
+</head>
+<body>
+
+<h2>REGISTRATION FORM</h2>
+
+
+<form onsubmit="return validateForm()">
+    <div id="fm1">
+  <label>ENTER NAME: </label>
+  <input type="text" id="name"><br><br>
+  <label >ENTER EMAIL: </label>
+  <input type="text" id="email"><br><br>
+  <label >ENTER PASSWORD: </label>
+  <input type="password" id="pass"><br><br>
+  <label>CONFIRM PASSWORD:</label>
+  <input type="password" id="cpass"><br><br>
+  <label>MOBILE NO: </label>
+  <input type="text" id="mobile"><br><br>
+
+    <input type="submit" value="Submit" id="sb">
+    </div>
+</form>
+
+<script>
+function validateForm(){
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let pass = document.getElementById("pass").value;
+    let cpass = document.getElementById("cpass").value;
+    let mobile = document.getElementById("mobile").value;
+
+    if(name=="" || email=="" || pass=="" || cpass=="" || mobile==""){
+        alert("all fields are required");
+        return false;
+    }
+
+    if(email.indexOf("@")==-1 || email.indexOf(".")==-1){
+        alert("Invalid Email");
+        return false;
+    }
+
+    if(pass.length < 8)
+    {
+        alert("Password must be minimum 8 characters");
+        return false;
+    }
+
+    if(pass != cpass){
+        alert("Password  doesnot matched");
+        return false;
+    }
+
+    if(mobile.length!=10 || isNaN(mobile)) {
+        alert("Invalid Mobile Number");
+        return false;
+    }
+
+    alert("Form Submitted Successfully");
+    return true;
+}
+</script>
+
+</body>
+</html>

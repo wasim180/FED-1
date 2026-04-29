@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todochecklist</title>
+</head>
+
+<body id="b">
+    <input type="text" id="a">
+    <button onclick="myfunction()" id="btn">add</button>
+    <script>
+        function myfunction(){
+        const para = document.createElement("p");
+        const node = document.createTextNode(document.getElementById('a').value);
+        const check=document.createElement("input");
+        check.type="checkbox";
+        para.appendChild(check);
+        para.appendChild(node);
+        let element = document.getElementById('b');
+        element.appendChild(para);
+        check.onclick=function(){
+            if(check.checked==true){
+                para.style.textDecoration="line-through";
+            }
+            else{
+               para.style.textDecoration="none";
+            }
+        }
+    };
+        
+    </script>
+
+
+</body>
+
+</html> 
+
+
+
+
+
