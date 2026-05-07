@@ -1,16 +1,7 @@
- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>todochecklist</title>
-</head>
-
-<body id="b">
-    <input type="text" id="a">
+  
+    <!-- <input type="text" id="a">
     <button onclick="myfunction()" id="btn">add</button>
-    <script>
+     <script>
         function myfunction(){
         const para = document.createElement("p");
         const node = document.createTextNode(document.getElementById('a').value);
@@ -30,13 +21,94 @@
         }
     };
         
-    </script>
+    </script>  -->
 
 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-list</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        #todo-input{
+            align-items: center;
+            border: 2px solid black;
+            height: 40px;
+            border-radius: 20px;
+            margin: 5px;
+            width: 30%;
+        }
+        #todo-input:hover{
+            align-items: center;
+            border: 2px solid black;
+            height: 40px;
+            border-radius: 20px;    
+        }
+        #add-btn{
+            background-color:rgb(93, 93, 247);
+            color: white;
+            height: 40px;
+            width: 10%;
+            margin: 5px;
+            border-radius: 25px;
+        }
+          #add-btn:hover{
+             background-color:deepskyblue;
+             color: black;
+            transform: translateY(-2px);
+        
+          }
+        #dropdown{
+            height: 40px;
+            border-radius: 35px;
+            margin: 5px;
+            padding-left: 20px;
+        }
+        
+        #bx1{
+            margin-left: 36%;
+        }
+    
+    </style>
+</head>
+<body>
+<h1>Simple Todo List </h1>
+<p>Welcome to the todo list. what's your plan.</p>
+<div id="bx1">
+<input type="text" id="todo-input" placeholder="    What needs to be done?">
+<button id="add-btn">Add Task</button>
+<select id="dropdown">
+    <option value="all">All</option>
+    <option value="pending">Pending</option>
+    <option value="completed">Completed</option>
+</select>
+</div>
+
+
+
+<script>
+    const input= document.getElementById("todo-input");
+    const button=document.getElementById("add-btn");
+    const list =document.getElementById("todolist");
+    
+    function createTodoNode(todo,index){
+        const li=document.createElement('li');
+        document.write(li)
+        
+
+    }
+    
+
+</script>
 </body>
-
 </html> 
-
 
 
 
