@@ -31,6 +31,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo-list</title>
     <style>
+        body{
+            background-color: lightgoldenrodyellow;
+        }
         h1{
             text-align: center;
         }
@@ -47,9 +50,12 @@
         }
         #todo-input:hover{
             align-items: center;
-            border: 2px solid black;
-            height: 40px;
-            border-radius: 20px;    
+            border: 2px solid rgb(139, 16, 221);
+            height: 42px;
+            border-radius: 20px; 
+            background-color:aliceblue;
+       
+           
         }
         #add-btn{
             background-color:rgb(93, 93, 247);
@@ -70,40 +76,70 @@
             border-radius: 35px;
             margin: 5px;
             padding-left: 20px;
+            background-color: white;
         }
+        #dropdown:hover{
+            height: 40px;
+            border-radius: 35px;
+            margin: 5px;
+            padding-left: 20px;
+            background-color: lightblue;
+            
+        }
+        
         
         #bx1{
             margin-left: 36%;
+        }
+        .class1{
+          border: 2px solid grey;
+          background-color: rgb(202, 175, 175);
+          width: 55%;
         }
     
     </style>
 </head>
 <body>
+   
 <h1>Simple Todo List </h1>
 <p>Welcome to the todo list. what's your plan.</p>
 <div id="bx1">
 <input type="text" id="todo-input" placeholder="    What needs to be done?">
-<button id="add-btn">Add Task</button>
+<button onclick="myfunction()" id="add-btn">Add Task</button>
 <select id="dropdown">
     <option value="all">All</option>
     <option value="pending">Pending</option>
     <option value="completed">Completed</option>
 </select>
+<div id="abc"></div>
 </div>
 
 
 
 <script>
-    const input= document.getElementById("todo-input");
-    const button=document.getElementById("add-btn");
-    const list =document.getElementById("todolist");
-    
-    function createTodoNode(todo,index){
-        const li=document.createElement('li');
-        document.write(li)
+       function myfunction(){
+        const para = document.getElementById("todo-input").value;
+        const paro =document.createElement('p');
+        const node = document.createTextNode(para);
+        const div1= document.createElement("div");
+        div1.className="class1";
+        const check=document.createElement("input");
+        check.type="checkbox";
+        paro.appendChild(node);
+        div1.appendChild(check);
+        div1.appendChild(paro);
         
-
-    }
+        let element = document.getElementById('abc');
+        element.appendChild(div1);
+        check.onclick=function(){
+            if(check.checked==true){
+                para.style.textDecoration="line-through";
+            }
+            else{
+               para.style.textDecoration="none";
+            }
+        }
+    };
     
 
 </script>
